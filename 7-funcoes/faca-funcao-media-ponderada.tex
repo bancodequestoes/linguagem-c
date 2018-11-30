@@ -1,0 +1,22 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Faça uma função em C que recebe como parâmetros duas notas e dois pesos e retorna a média ponderada das duas notas.
+
+\begin{solution}
+\begin{lstlisting}
+float media(float m1, float m2, float p1, float p2) {
+
+	float numerador = m1*p1 + m2*p2;
+	float denominador = p1 + p2;
+
+	float m = numerador/denominador;
+	
+	return m;
+}
+\end{lstlisting}
+\end{solution}

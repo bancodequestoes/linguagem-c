@@ -1,0 +1,48 @@
+
+\newtcbtheorem[no counter]{exemplo}{Exemplo}{
+	enhanced,
+	sharp corners,
+	attach boxed title to top left={
+		yshifttext=-1mm
+	},
+	colback=white,
+	colframe=blue!25,
+	fonttitle=\bfseries,
+	coltitle=black,
+	boxed title style={
+		sharp corners,
+		size=small,
+		colback=blue!25,
+		colframe=blue!25,
+	} 
+}{exemplo}
+
+\linespread{1.2}
+
+\definecolor{greenE}{RGB}{29, 100, 71}
+\definecolor{cinz}{RGB}{116,113,94}
+\definecolor{includes}{RGB}{133,23,179}
+\definecolor{main}{RGB}{164,152,17}
+\lstset{language=C,
+	basicstyle=\linespread{0.9}\ttfamily,
+	numbers=left,
+	tabsize=4,
+	keepspaces,
+	aboveskip=15pt,
+	columns=fixed,
+	showstringspaces=false,
+	extendedchars=true,
+	frame=single,
+	breaklines=true,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	keywordstyle=\bfseries\color{blue},
+	stringstyle=\color{greenE},
+	commentstyle=\bfseries\color{red},
+	morecomment=[l][\color{includes}]{\#}
+}
+
+\newcommand{\tf}[1][{}]{%
+	\fillin[#1][0.25in]%
+}

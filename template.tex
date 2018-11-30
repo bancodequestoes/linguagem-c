@@ -1,10 +1,18 @@
-\documentclass[a4paper, 12pt, addpoints]{exam} 
+\documentclass[a4paper, 12pt, addpoints, answers]{exam} 
+
 \usepackage{listings} 
 \usepackage[utf8]{inputenc}  
 \usepackage[T1]{fontenc} 
 \usepackage[brazil]{babel} 
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{bd} 
+
 \pointpoints{ponto}{pontos}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solução:}\enspace}
 \footer{}{Página \thepage\ de \numpages}{} 
+
 \begin{document} 
     \begin{questions}
     \input{inputs}

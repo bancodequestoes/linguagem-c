@@ -1,0 +1,33 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Faça um algoritmo em C que leia uma matriz \textbf{20} x \textbf{30} de inteiros e imprima na tela a soma de todos os elementos da matriz utilizando \emph{for}.
+
+\begin{solution}
+\begin{lstlisting}
+#include <stdio.h>
+
+int main(){
+	
+	int m[20][30], soma = 0;
+	
+	for(int i=0;i<20;i++){
+		for(int j=0;j<30;j++){
+			scanf("%d", &m[i][j]);
+		}
+	}
+	
+	for(int i=0;i<20;i++){
+		for(int j=0;j<30;j++){
+			soma = soma + m[i][j];
+		}
+	}
+	
+	printf("%d", soma);
+} 
+\end{lstlisting}
+\end{solution}

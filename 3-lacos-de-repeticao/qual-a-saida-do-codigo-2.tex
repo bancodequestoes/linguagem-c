@@ -1,0 +1,44 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Qual valor a variável \textbf{sum} tem no final desse código? Marque a opção correta.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main(){
+	
+	int num, sum = 0, foo = 12, count;
+	
+	if(foo % 4 < 10){
+	
+		num = 2;
+	
+		if(foo % 3 == 0){
+			num = 3;
+		}
+	}
+	
+	if(foo % 5 == 5){
+		num = 1;
+	}
+	
+	for(count = 0; count < num; count++){
+		sum = sum + count;
+	}
+	
+	printf("%d", sum);
+}
+\end{lstlisting}
+
+\begin{oneparchoices}
+	\choice 2
+	\CorrectChoice 3
+	\choice 4
+	\choice 5
+	\choice 6
+\end{oneparchoices}

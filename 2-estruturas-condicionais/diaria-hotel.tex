@@ -2,6 +2,8 @@
 % !TeX spellcheck = pt_BR
 % !TeX root = ../avaliacao.tex
 
+\question[10]
+
 Um hotel cobra R\$ 60.00 a diária e mais uma taxa de serviços. A taxa de serviços é de:
 
 \begin{parts}
@@ -12,4 +14,29 @@ Um hotel cobra R\$ 60.00 a diária e mais uma taxa de serviços. A taxa de servi
 
 Construa um algoritmo que, dado o número de diárias, mostre o total da conta de um cliente
 
+\begin{solution}
+	\begin{lstlisting}
+#include <stdio.h>
 
+int main(){
+
+	int diarias;
+	float valorTotal;
+	
+	printf("Digite o numero de diarias: ");
+	scanf("%d", &diarias);
+	
+	if(diarias < 15){
+		valorTotal = 60.0*diarias + 8.0*diarias;
+	}
+	if(diarias == 15){
+		valorTotal = 60.0*diarias + 6.0*diarias;
+	}
+	if(diarias > 15){
+		valorTotal = 60.0*diarias + 5.5*diarias;
+	}
+	
+	printf("Valor Total: %f", valorTotal);
+}
+\end{lstlisting}
+\end{solution}
