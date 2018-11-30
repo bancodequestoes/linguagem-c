@@ -1,0 +1,37 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Observe o algoritmo em C abaixo apresenta \textbf{5} erros de sintaxe da linguagem. Na sua resposta indique a linha e reescreva-a corretamente.
+
+\begin{lstlisting}
+#incluir <stdio.h>
+
+int main () {
+
+	int i, numero, R;
+	
+	printf("Digite o numero: ");
+	scanf("%f", &numero);
+	
+	R = 1;
+	
+	if (numero !== 1) {
+		R ?= R * numero;
+	}
+
+	escreva("Resultado: %d\n", R);
+}
+
+\end{lstlisting}
+
+\begin{parts}
+	\part \fillin[Linha 1 : \#include <stdio.h>][15cm]
+	\part \fillin[Linha 8: scanf("\%d", \&numero);][15cm]
+	\part \fillin[Linha 12: if (numero != 1) \{][15cm]
+	\part \fillin[Linha 13: R = R * numero;][15cm]
+	\part \fillin[Linha 16: print("Resultado: \%d\textbackslash n", R)][15cm]
+\end{parts}

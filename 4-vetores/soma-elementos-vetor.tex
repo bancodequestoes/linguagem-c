@@ -1,0 +1,30 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Escreva um programa em C que imprime na tela todos os números pares de 1 até 1000 (inclusive).
+
+\begin{solution}
+\begin{lstlisting}
+#include <stdio.h>
+
+	int main() {
+	
+	int vet[100];
+	int i, soma = 0;
+	
+	for(i=0; i<100; i++){
+		scanf("%d", &vet[i]);
+	}
+	
+	for(i=0; i<100; i++){
+		soma = soma + vet[i];
+	}
+	
+	printf("Soma: %d", soma);
+}
+\end{lstlisting}
+\end{solution}

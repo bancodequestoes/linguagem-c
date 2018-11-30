@@ -1,0 +1,43 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../prova.tex
+% !Tex tags = 
+
+\question[10]
+
+Qual valor a variável \textbf{x} tem no final desse trecho de código? Marque a opção correta.
+
+\begin{lstlisting}
+#include<stdio.h>
+
+	int main(){
+	
+	int foo = 12;
+	int bar = 0;
+	int i,x = 0;
+	
+	if(foo % 4 < 10){
+		bar = 2;
+	}else{
+		bar = 1;
+	}
+	
+	if(foo % 3 < 10){
+		bar = 3;
+	}
+	
+	for(i=0; i<bar; i++){
+		x = x + 2;
+	}
+	
+	printf("%d", x);
+}
+\end{lstlisting}
+
+\begin{choices}
+	\choice 2
+	\choice 3
+	\choice 4
+	\choice 5
+	\CorrectChoice 6
+\end{choices}
