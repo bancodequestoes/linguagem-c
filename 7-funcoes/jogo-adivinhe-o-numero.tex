@@ -1,0 +1,58 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = ../template.tex
+% !Tex tags = 
+
+\question[10]
+
+Escreva um programa em C que faça o jogo de ``adivinhar um número'' da forma que se segue: Seu programa escolhe um número para ser adivinhado selecionando um inteiro aleatoriamente no intervalo de 1 a 1000. O programa então escreve:
+
+\begin{exemplo}{}{}
+Tenho um numero entre 1 e 1000 \newline
+Você pode adivinhar meu numero? \newline 
+Por favor, digite seu primeiro palpite. 
+\end{exemplo}
+
+O jogador digita então o primeiro palpite. O programa escreve uma das respostas seguintes:
+
+\begin{exemplo}{}{}
+	Excelente! Você adivinhou o numero! Você gostaria de tentar novamente? \newline
+	Muito baixo. Tente novamente. \newline
+	Muito alto. Tente novamente.
+\end{exemplo}
+
+Se o palpite do jogador estiver incorreto, seu programa deve fazer um laço até que o jogador finalmente acerte o número. Seu programa deve continuar dizendo \textbf{Muito alto} ou \textbf{Muito baixo} para ajudar o jogador a ``chegar'' na resposta correta. Nota: A técnica de busca empregada neste problema é chamada \textit{pesquisa binaria}.
+
+\begin{solution}
+\begin{lstlisting}
+#include <stdio.h>
+
+int main(void) {
+
+	int terminar = 0, numero = 43, palpite=-1;
+	printf("Tenho um numero entre 1 e 1000.\n");
+	printf("Voce pode adivinhar o meu numero?\n");
+	
+	do{
+		do{
+			printf("Por favor, digite o seu palpite:");
+			scanf("%d", &palpite);
+			
+			if(palpite < numero){
+				printf("Muito baixo! Tente novamente.\n");
+			}
+			if(palpite > numero){
+				printf("Muito alto! Tente novamente.\n");
+			}
+		}while(palpite != numero);
+		
+		printf("Excelente! Voce adivinhou o numero!\n");
+		printf("Voce gostaria de tentar novamente?");
+		scanf("%d", &terminar);
+	
+	}while(terminar == 0);
+	
+	printf("Acabaou");
+}
+\end{lstlisting}
+\end{solution}
